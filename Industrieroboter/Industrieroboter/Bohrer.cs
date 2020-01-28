@@ -9,13 +9,13 @@ namespace Industrieroboter
     class Bohrer : Werkzeug
     {
         private int groesse;
-        public Bohrer( String art, int verschleiss, int groesse)
+        public Bohrer( string art, int verschleiss, int groesse) :base(art, verschleiss)
         {
-
+            this.groesse = groesse;
         }
-        public override void ausgeben()
+        public override void ausgeben() 
         {
-
+            Console.WriteLine("Bohrer der Groesse {0} (Verschleiss {1}%)", groesse, verschleiss);
         }
     }
 }

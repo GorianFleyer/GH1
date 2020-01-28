@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bohrer.cs" />
+    <Compile Include="Greifer.cs" />
     <Compile Include="Industrieroboter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schweisser.cs" />
+    <Compile Include="Testprogramm.cs" />
     <Compile Include="Werkzeug.cs" />
   </ItemGroup>
   <ItemGroup>

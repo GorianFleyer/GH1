@@ -8,11 +8,10 @@ namespace Industrieroboter
 {
     abstract class Werkzeug
     {
-        private String art;
+        private string art;
         protected int verschleiss;
-        public Werkzeug()
+        public Werkzeug(string art, int verschleiss)
         {
-
         }
         public abstract void ausgeben();
       

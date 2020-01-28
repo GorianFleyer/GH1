@@ -8,19 +8,34 @@ namespace Industrieroboter
 {
     class Industrieroboter
     {
-        private static int maxAnzWerkzeuge = 10;
+        private readonly int maxAnzWerkzeuge = 10;
+        public Werkzeug[] werkzeugKasten;
 
         public Industrieroboter()
         {
-
+            werkzeugKasten = new Werkzeug[maxAnzWerkzeuge];
         }
-        public bool werkzeugHinzufuegen( int platz)
+        public bool werkzeugHinzufuegen( int platz, Werkzeug werkzeug )
         {
-            return true;
+           
+            
+                if(werkzeugKasten[platz] == null && platz < maxAnzWerkzeuge -1)
+                {
+                    werkzeugKasten[platz] = werkzeug;
+                       return true;
+                }
+            
+            return false;
         }
         public bool werkzeugEntfernen(int platz)
         {
-            return true;
+
+            if (werkzeugKasten[platz] != null && platz < maxAnzWerkzeuge -1)
+            {
+                werkzeugKasten[platz] = null;
+                return true;
+            }
+            return false;
         }
     }
 }
